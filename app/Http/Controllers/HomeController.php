@@ -25,6 +25,12 @@ class HomeController extends Controller {
 	{
         isset($hung)&& $hung =1;
 	}
+	public function re(Request $request){
+	    if($request->input('color'))
+	        return Response::view('welcome')->header('AMP-Access-Control-Allow-Source-Origin', 'http://localhost');
+	    else
+	        return Response::view('home')->header('AMP-Access-Control-Allow-Source-Origin', 'http://localhost');
+    }
     public function ajaxShirtsAddToCart(Request $request){
         $value = [ "color" => '1001' , "size" => 'S', "quantity" => $request->input('quantity')];
         return response()->json($value)->header('AMP-Access-Control-Allow-Source-Origin', 'http://localhost');
@@ -132,5 +138,11 @@ class HomeController extends Controller {
 	}
     public function indexAmp(){
         return view('Mobile.homeAmp');
+    }
+    /**
+     * menu amp
+     */
+    public  function menuAmp(){
+        return view('Mobile.Menu');
     }
 }

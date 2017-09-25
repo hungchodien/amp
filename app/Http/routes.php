@@ -26,3 +26,7 @@ Route::get('/amp/home', 'HomeController@indexAmp');
 Route::post("/shirts/addToCart", "HomeController@ajaxShirtsAddToCart");
 Route::get("/shirts/addToCart", "HomeController@ajaxShirtsAddToCart");
 Route::get("/shirts/sizesAndPrices", "HomeController@ajaxShirtsSizesAndPrices");
+
+Route::post("/shirts/re" , "HomeController@re");
+
+Route::get("/amp/menu", "HomeController@MenuAmp");

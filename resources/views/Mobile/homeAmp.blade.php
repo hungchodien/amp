@@ -313,6 +313,26 @@ limitations under the License.
             <template type="amp-mustache">Error adding to cart: </template>
         </div>
     </form>
+    <form method="post" action-xhr="/shirts/re" target="_top">
+        <amp-selector name="color" >
+            <table>
+                <tr>
+                    <td><amp-img width=40 height=40 option="1001" src="./shirts/swatch/black.jpg" selected></amp-img></td>
+                    <td><amp-img width=40 height=40 option="1002" src="./shirts/swatch/blue.jpg"></amp-img></td>
+                    <td><amp-img width=40 height=40 option="1010" src="./shirts/swatch/brown.jpg"></amp-img></td>
+                    <td><amp-img width=40 height=40 option="1014" src="./shirts/swatch/dark-green.jpg"></amp-img></td>
+                </tr>
+                <tr>
+                    <td><amp-img width=40 height=40 option="1015" src="./shirts/swatch/gray.jpg"></amp-img></td>
+                    <td><amp-img width=40 height=40 option="1016" src="./shirts/swatch/light-gray.jpg"></amp-img></td>
+                    <td><amp-img width=40 height=40 option="1021" src="./shirts/swatch/navy.jpg"></amp-img></td>
+                    <td><amp-img width=40 height=40 option="1030" src="./shirts/swatch/wine.jpg"></amp-img></td>
+                </tr>
+            </table>
+        </amp-selector>
+        <input type="submit" value="dfdfsdfsd"
+               class="mdl-button mdl-button--raised mdl-button--accent">
+    </form>
 </div>
 </body>
 </html>
