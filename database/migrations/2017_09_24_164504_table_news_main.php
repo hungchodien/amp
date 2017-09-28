@@ -44,10 +44,13 @@ class TableNewsMain extends Migration {
             $table->string('TagTenKhongDau')->nullable();
             $table->integer('NoiBat')->default(0);
             $table->integer('SoLuotXem')->default(0);
+            $table->integer('SoLuotThich')->default(0);
             $table->integer('Publish')->default(1);
             $table->longText('Customfield')->nullable();
-            $table->integer('idLoaiTin')->unsigned();
+            $table->integer('idLoaiTin')->unsigned()->default(1);
             $table->foreign('idLoaiTin')->references('id')->on('LoaiTin');
+            $table->integer('idUser')->unsigned();
+            $table->foreign('idUser')->references('id')->on('users');
             $table->timestamps();
         });
         Schema::create('Comment', function (Blueprint $table) {
